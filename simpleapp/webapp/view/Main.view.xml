@@ -16,7 +16,9 @@
                                 path: 'localModel>/data',
                                 sorter: { 
                                     path: 'author' }
-                                    }">
+                                    }"
+                            mode="SingleSelectMaster"
+                            selectionChange="onSelectionChange">
                             <items>
                                 <StandardListItem 
                                     id="idStandardListItem"
