@@ -15,7 +15,7 @@
 		                    items="{
                                 path: 'localModel>/data',
                                 sorter: { 
-                                    path: 'localModel>author' }
+                                    path: 'author' }
                                     }">
                             <items>
                                 <StandardListItem 
