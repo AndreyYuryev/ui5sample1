@@ -10,6 +10,24 @@
 				<Page id="page" title="{i18n>title}">
 					<content>
                         <Button id="button" text="PressButton" press="onButtonPressed" />
+                        <List id="idListThemes"
+	                	    headerText="Themes"
+		                    items="{
+                                path: 'localModel>/data',
+                                sorter: { 
+                                    path: 'localModel>author' }
+                                    }">
+                            <items>
+                                <StandardListItem 
+                                    id="idStandardListItem"
+                                    title="{localModel>title}"
+                                    description="{ parts: [
+                                        { path: 'localModel>description' },
+                                        { path: 'localModel>author' }
+                                        ]}" 
+                                    info="{localModel>status}" />
+                            </items>
+		                </List>
                     </content>
 				</Page>
 			</pages>

@@ -1,8 +1,8 @@
 sap.ui.define([
-		"sap/ui/core/UIComponent",
-		"sap/ui/Device",
-		"simpleapp/model/models"
-	],
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "simpleapp/model/models"
+],
     function (UIComponent, Device, models) {
         "use strict";
 
@@ -23,8 +23,39 @@ sap.ui.define([
                 // enable routing
                 this.getRouter().initialize();
 
-				// set the device model
-				this.setModel(models.createDeviceModel(), "device");
+                // set the device model
+                this.setModel(models.createDeviceModel(), "device");
+
+                let oJsonData = {
+                    data: [
+                        {
+                            title: 'Thema 1',
+                            description: 'A first thema',
+                            dateOfEvent: null,
+                            author: 'z.Ivanov',
+                            status: 'Not Ok'
+                        },
+                        {
+                            title: 'Thema 2',
+                            description: 'A second thema',
+                            dateOfEvent: null,
+                            author: 'a.Petrov',
+                            status: 'Ok'
+                        },
+                        {
+                            title: 'Thema 3',
+                            description: 'A third thema',
+                            dateOfEvent: null,
+                            author: 'x.Sidorov',
+                            status: 'Ok'
+                        }
+                    ]
+                };
+
+                let oLocalModel = new JSONModel(oJsonData);
+
+                this.setModel(oLocalModel, "localModel");
+
             }
         });
     }
