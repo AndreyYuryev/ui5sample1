@@ -38,7 +38,9 @@ sap.ui.define([
 
             open: function(sText) {
                 this._getDialog().then(function(){
-                    Fragment.byId(this._sId, "idText").setText("Title" + this._oView.getModel("viewModel").getProperty("/Title") + " " + sText);
+                /*    Fragment.byId(this._sId, "idText").setText("Title" + this._oView.getModel("viewModel").getProperty("/Title") + " " + sText);
+                */
+                Fragment.byId(this._sId, "idText").setText("Title" + " " + sText);
                 this._oDialog.open();
                 }.bind(this));
             }

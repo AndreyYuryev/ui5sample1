@@ -9,16 +9,15 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-                        <Button id="button" text="PressButton" press="onButtonPressed" />
+                        <Button id="button1" text="PressButton" press="onButtonPressed" />
+                        <Button id="button2" text="PressButton" press="onDialogPress" type="Accept" />
                         <List id="idListThemes"
 	                	    headerText="Themes"
 		                    items="{
                                 path: 'localModel>/data',
                                 sorter: { 
                                     path: 'author' }
-                                    }"
-                            mode="SingleSelectMaster"
-                            selectionChange="onSelectionChange">
+                                    }">
                             <items>
                                 <StandardListItem 
                                     id="idStandardListItem"

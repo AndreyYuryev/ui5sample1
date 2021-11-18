@@ -31,23 +31,14 @@ sap.ui.define([
                 MessageToast.show("pressed button" + msg);
             },
 
-            onSelectionChange: function (oEvent) {
-                let oItem = oEvent.getSource().getSelectedItem();
-                let oData = oItem.getBindingContext();
-            /*    let sPath = oItem.getBindingContext().getPath();
-                let oData = this.getView().getModel().getProperty(sPath);
-                this.getView().getModel("viewModel").setProperty("/ThemeId", oData.ThemeId);
-                this.getView().getModel("viewModel").setProperty("/Title", oData.Title);
-                this.getView().getModel("viewModel").setProperty("/Description", oData.Description);
-                this.getView().getModel("viewModel").setProperty("/Owner", oData.Owner);
-                this.getView().getModel("viewModel").setProperty("/Status", oData.Status);
-                this.getView().getModel("viewModel").setProperty("/CreationDate", oData.CreationDate);
-            */
-            },
-
             onClose: function (oEvent) {
                 oEvent.getSource().getParent().close();
-            }
+            }, 
+
+            onDialogPress: function () {
+                let sText = "Look at me!";
+                this.Simple.open("\n"+sText);
+            },
 
 		});
 	});
