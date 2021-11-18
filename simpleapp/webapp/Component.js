@@ -35,21 +35,21 @@ sap.ui.define([
                             description: 'A first thema',
                             dateOfEvent: null,
                             author: 'z.Ivanov',
-                            status: 'Not Ok'
+                            status: 'active'
                         },
                         {
                             title: 'Thema 2',
                             description: 'A second thema',
                             dateOfEvent: null,
                             author: 'a.Petrov',
-                            status: 'Ok'
+                            status: 'New'
                         },
                         {
                             title: 'Thema 3',
                             description: 'A third thema',
                             dateOfEvent: null,
                             author: 'x.Sidorov',
-                            status: 'Ok'
+                            status: 'test'
                         }
                     ]
                 };

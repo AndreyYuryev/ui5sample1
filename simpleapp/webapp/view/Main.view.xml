@@ -26,7 +26,14 @@
                                         { path: 'localModel>description' },
                                         { path: 'localModel>author' }
                                         ]}" 
-                                    info="{localModel>status}" />
+                                    info="{
+                                        path: 'localModel>status',
+                                        formatter: '.formatter.statusState'
+                                    }"
+                                    icon="{
+                                        path: 'localModel>status',
+                                        formatter: '.formatter.statusIcon'
+                                    }" />
                             </items>
 		                </List>
                     </content>

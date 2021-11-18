@@ -2,15 +2,19 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
-    "simpleapp/utils/Simple"
+    "simpleapp/utils/Simple",
+    "simpleapp/model/formatter"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller, MessageToast, JSONModel, Simple) {
+	function (Controller, MessageToast, JSONModel, Simple, formatter) {
 		"use strict";
 
 		return Controller.extend("simpleapp.controller.Main", {
+
+            formatter: formatter,
+
 			onInit: function () {
                 /*    let oModel = new JSONModel({
                     ThemeId: "",
